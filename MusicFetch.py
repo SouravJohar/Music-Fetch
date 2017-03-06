@@ -12,7 +12,7 @@ def dlProgress(count, blockSize, totalSize):
 
 songInfo = {}
 url = "http://mp3.direct/#!s="
-url += raw_input(">")
+url += raw_input("Song>")
 connectionState = False
 if "SongDownloads" not in os.listdir("."):
     os.system("mkdir SongDownloads")
@@ -42,7 +42,7 @@ if connectionState:
         track += 1
     if track != 0:
         while True:
-            choice = raw_input(">")
+            choice = raw_input("Choice>")
             if int(choice) in range(1,min(11, min(len(titles), len(songDetails)))):
                 break
             else:
